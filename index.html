@@ -75,6 +75,43 @@
       }
    </style>
    <!-- end background video contact -->
+
+   <!-- hide divace salain laptop info kotak header-->
+   <style>
+      /* Default styles (visible on laptops and larger devices) */
+      .hide-on-mobile {
+         display: block;
+      }
+
+      /* Hide on devices smaller than 1024px (e.g., tablets and phones) */
+      @media screen and (max-width: 1024px) {
+         .hide-on-mobile {
+            display: none;
+         }
+      }
+   </style>
+   <!-- end hide divace selain laptop -->
+
+   <!-- view image selain laptop pada slider -->
+   <style>
+      /* Default styles (for non-laptop devices, like tablets and phones) */
+      .adaptive-image {
+         width: auto;
+         /* Default width (natural size of the image) */
+         height: auto;
+         /* Default height */
+      }
+
+      /* For laptops and larger devices (widths greater than 1024px) */
+      @media screen and (min-width: 1025px) {
+         .adaptive-image {
+            width: 900px;
+            /* Specific size for laptops */
+            height: 700px;
+         }
+      }
+   </style>
+   <!-- end -->
 </head>
 <!--=============== END CSS ===============-->
 
@@ -115,7 +152,7 @@
       <div class="menu_sitbar di_mr01">
          <div class="logo">
             <a href="index.html"><a href="index.html"><img src="images/logo_putih.png" alt="#"
-                     style="width: 150px; height: 60px;"></a>
+                     style="width: 180px; height: 100px;"></a>
          </div>
          <nav class="navigation navbar navbar-expand-md navbar-index ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
@@ -131,11 +168,11 @@
                      <a class="nav-link" href="about.html">About</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="shop.html">shop</a>
+                     <a class="nav-link" href="shop.html">What We Do</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a class="nav-link" href="quality.html">quality</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                      <a class="nav-link" href="contact.html">Contact Us</a>
                   </li>
@@ -155,7 +192,7 @@
                         <div class="center-desk">
                            <div class="logo">
                               <a href="index.html"><img src="images/logo_putih.png" alt="#"
-                                    style="width: 100px; height: 40px;"></a>
+                                    style="width: 180px; height: 90px;"></a>
                            </div>
                         </div>
                      </div>
@@ -177,11 +214,11 @@
                                  <a class="nav-link" href="about.html">About</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="shop.html">shop</a>
+                                 <a class="nav-link" href="What We Do.html">What We Do</a>
                               </li>
-                              <li class="nav-item">
+                              <!-- <li class="nav-item">
                                  <a class="nav-link" href="quality.html">quality</a>
-                              </li>
+                              </li> -->
                               <li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contact Us</a>
                               </li>
@@ -205,11 +242,12 @@
                            <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search"
                                     style="cursor: pointer;" aria-hidden="true"></i></a> </li>
                         </ul> -->
-                        <li><i class="fa fa-phone" aria-hidden="true"></i> Call 0811 899 472</li>
-                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="Javascript:void(0)">
-                              demo@gmail.com</a></li>
-                        <li> <i class="fa fa-language" aria-hidden="true"></i><a href="Javascript:void(0)">Translate
-                              Bahasa</a></li>
+                        <li class="hide-on-mobile"><i class="fa fa-phone" aria-hidden="true"></i> Call 0813 3838 7866
+                        </li>
+                        <li class="hide-on-mobile"><i class="fa fa-envelope" aria-hidden="true"></i><a
+                              href="Javascript:void(0)">info@humanlife.com</a></li>
+                        <li> <i class="fa fa-language" aria-hidden="true"></i><a href="Javascript:void(0)">IND | ENG</a>
+                        </li>
                      </ul>
                   </div>
                </div>
@@ -246,7 +284,8 @@
                                        </div>
                                        <div class="col-md-5">
                                           <div class="banner_img">
-                                             <figure><img class="img_responsive" src="images/Slide_1_update.png">
+                                             <figure><img class="img_responsive adaptive-image"
+                                                   src="images/Slide_1_update.png">
                                              </figure>
                                           </div>
                                        </div>
@@ -269,7 +308,9 @@
                                        </div>
                                        <div class="col-md-5">
                                           <div class="banner_img">
-                                             <figure><img class="img_responsive" src="images/Slide_2_update.png">
+                                             <figure>
+                                                <img class="img_responsive adaptive-image"
+                                                   src="images/Slide_2_update.png">
                                              </figure>
                                           </div>
                                        </div>
@@ -292,7 +333,8 @@
                                        </div>
                                        <div class="col-md-5">
                                           <div class="banner_img">
-                                             <figure><img class="img_responsive" src="images/Slide_3_update.png">
+                                             <figure><img class="img_responsive adaptive-image"
+                                                   src="images/Slide_3_update.png">
                                              </figure>
                                           </div>
                                        </div>
@@ -300,7 +342,7 @@
                                  </div>
                               </div>
                            </div>
-                           <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                               data-slide="prev">
                               <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
                               <span class="sr-only">Previous</span>
@@ -309,7 +351,7 @@
                               data-slide="next">
                               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                               <span class="sr-only">Next</span>
-                           </a> -->
+                           </a>
                         </div>
                      </div>
                   </div>
