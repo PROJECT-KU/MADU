@@ -112,6 +112,49 @@
       }
    </style>
    <!-- end -->
+
+   <!-- sejajr kontak pada header -->
+   <style>
+      /* Reset list styles */
+      .conta_top {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+         display: flex;
+         /* Flexbox for horizontal alignment */
+         align-items: center;
+         /* Vertically center items */
+         justify-content: space-between;
+         /* Space out the items evenly */
+         flex-wrap: wrap;
+         /* Allow items to wrap to the next line on smaller screens */
+      }
+
+      /* Style individual list items */
+      .conta_top li {
+         margin: 0 10px;
+         /* Add spacing between items */
+         display: flex;
+         /* Ensure icons and text align correctly */
+         align-items: center;
+         font-size: 14px;
+         /* Adjust font size for readability */
+      }
+
+      /* Adjust styles for smaller devices */
+      @media screen and (max-width: 768px) {
+         .conta_top {
+            justify-content: center;
+            /* Center items on smaller screens */
+         }
+
+         .hide-on-mobile {
+            display: none;
+            /* Hide items with this class on smaller screens */
+         }
+      }
+   </style>
+   <!-- end -->
 </head>
 <!--=============== END CSS ===============-->
 
@@ -235,18 +278,12 @@
                      </ul> -->
                   </div>
                   <div class="col-md-4">
-                     <ul class="conta_top" style="margin-left: -100px;">
-                        <!-- <ul class="email text_align_right">
-                           <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user"
-                                    aria-hidden="true"></i></a></li>
-                           <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search"
-                                    style="cursor: pointer;" aria-hidden="true"></i></a> </li>
-                        </ul> -->
+                     <ul class="conta_top">
                         <li class="hide-on-mobile"><i class="fa fa-phone" aria-hidden="true"></i> Call 0813 3838 7866
                         </li>
                         <li class="hide-on-mobile"><i class="fa fa-envelope" aria-hidden="true"></i><a
                               href="Javascript:void(0)">info@humanlife.com</a></li>
-                        <li> <i class="fa fa-language" aria-hidden="true"></i><a href="Javascript:void(0)">IND | ENG</a>
+                        <li><i class="fa fa-language" aria-hidden="true"></i><a href="Javascript:void(0)">IND | ENG</a>
                         </li>
                      </ul>
                   </div>
