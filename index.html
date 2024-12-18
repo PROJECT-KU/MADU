@@ -125,29 +125,29 @@
          align-items: center;
          /* Vertically center items */
          justify-content: space-between;
-         /* Space out the items evenly */
-         flex-wrap: wrap;
-         /* Allow items to wrap to the next line on smaller screens */
+         /* Evenly space items */
+         flex-wrap: nowrap;
+         /* Prevent items from wrapping to the next line */
+         overflow-x: auto;
+         /* Allow horizontal scrolling if content overflows */
       }
 
       /* Style individual list items */
       .conta_top li {
-         margin: 0 10px;
+         margin: 0 15px;
          /* Add spacing between items */
          display: flex;
          /* Ensure icons and text align correctly */
          align-items: center;
+         /* Center icon and text vertically */
          font-size: 14px;
          /* Adjust font size for readability */
+         white-space: nowrap;
+         /* Prevent text from breaking onto multiple lines */
       }
 
-      /* Adjust styles for smaller devices */
+      /* Hide certain items on smaller screens */
       @media screen and (max-width: 768px) {
-         .conta_top {
-            justify-content: center;
-            /* Center items on smaller screens */
-         }
-
          .hide-on-mobile {
             display: none;
             /* Hide items with this class on smaller screens */
