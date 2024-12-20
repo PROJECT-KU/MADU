@@ -1,257 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-    <!-- site metas -->
-    <title>honey</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- style css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Responsive-->
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
-    <!-- Tweaks for older IEs-->
-    <link
-      rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-    />
-    <!--[if lt IE 9]>
+
+<!--=============== CSS ===============-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+  <title>honey</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
     ><![endif]-->
-  </head>
-  <!-- body -->
-  <body class="main-layout inner_page">
-    <!-- loader  -->
-    <div class="loader_bg">
-      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-    </div>
-    <!-- end loader -->
-    <!-- header -->
-    <header>
-      <div class="header">
-        <div class="container-fluid">
-          <div class="row d_flex">
-            <div class="col-md-2 col-sm-3 col logo_section">
-              <div class="full">
-                <div class="center-desk">
-                  <div class="logo">
-                    <a href="index.html"
-                      ><img
-                        src="images/logo_hitam.png"
-                        alt="#"
-                        style="width: 150px; height: 60px"
-                    /></a>
-                  </div>
+
+  <!-- posisi fix header ketika di scroll -->
+  <style>
+    header {
+      position: sticky;
+      /* Atau gunakan 'fixed' jika ingin header selalu terlihat */
+      top: 0;
+      /* Menentukan jarak dari atas */
+      z-index: 1000;
+      /* Pastikan header berada di atas elemen lainnya */
+      background-color: #fff;
+      /* Warna latar belakang header */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* Bayangan untuk efek kedalaman */
+      transition: background-color 0.3s;
+      /* Transisi halus untuk perubahan warna */
+    }
+
+    header.scrolled {
+      background-color: #f8f9fa;
+      /* Warna latar belakang saat di-scroll */
+    }
+  </style>
+  <!-- end -->
+</head>
+<!--=============== END CSS ===============-->
+
+<!-- body -->
+
+<body class="main-layout inner_page">
+  <!--=============== LOADER ===============-->
+  <div class="loader_bg">
+    <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+  </div>
+  <!--=============== END LOADER ===============-->
+
+  <!--=============== HEADER ===============-->
+  <header>
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row d_flex">
+          <div class="col-md-2 col-sm-3 col logo_section">
+            <div class="full">
+              <div class="center-desk">
+                <div class="logo">
+                  <a href="index.html"><img src="images/logo_hitam.png" alt="#"
+                      style="width: 150px; height: 60px" /></a>
                 </div>
               </div>
             </div>
-            <div class="col-md-8 col-sm-9">
-              <nav class="navigation navbar navbar-expand-md navbar-dark">
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarsExample04"
-                  aria-controls="navbarsExample04"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarsExample04">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="shop.html">shop</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="quality.html">quality</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-            <div class="col-md-2">
-              <ul class="email text_align_right">
-                <li class="d_none">
-                  <a href="Javascript:void(0)"
-                    ><i class="fa fa-user" aria-hidden="true"></i
-                  ></a>
+          </div>
+          <div class="col-md-8 col-sm-9">
+            <nav class="navigation navbar navbar-expand-md navbar-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop.html">What We Do</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="quality.html">quality</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-2">
+            <ul class="email text_align_right">
+              <li class="d_none">
+                <a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a>
+              </li>
+              <li class="d_none">
+                <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--=============== END HEADER ===============-->
+
+  <!--=============== ABOUT ===============-->
+  <div class="about">
+    <div class="container">
+      <div class="row d_flex">
+        <div class="col-md-6">
+          <div class="titlepage text_align_left">
+            <h2>About</h2>
+            <p>
+              PT Human Life Indonesia adalah perusahaan percabangan asal Korea yang didirikan pada tahun 2008. Kami
+              merupakan jembatan eksport import antara Indonesia dan Korea, tetapi tidak hanya Indonesia dan Korea saja,
+              Kami juga sebagai jembatan untuk Anda jika ingin melakukan eksport import ke Negara Asia lainnya.
+              Selain itu, PT Human Life Indonesia juga bergerak dalam bisnis pemasaran, dan juga All in One Service
+              untuk target market B2B maupun B2C. Bersama Kami, Anda tidak perlu kebingungan lagi dalam memasarkan
+              produk Anda ke luar Negeri, karena dengan jaringan Kami yang luas, serta metode pemasaran kami yang sudah
+              terbukti, Kami akan membantu Anda untuk mendapatkan pasar dan omset terbaik di Negara yang Anda targetkan.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="about_img text_align_center">
+            <figure>
+              <img class="img_responsive" src="images/about.png" alt="#" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===============  END ABOUT ===============-->
+
+  <!--=============== FOOTER ===============-->
+  <footer>
+    <div class="footer" style="background-color: rgb(74, 75, 75);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="infoma text_align_left">
+              <h3>About</h3>
+              <p class="ipsum">PT Human Life Indonesia adalah perusahaan percabangan asal Korea yang didirikan
+                pada tahun 2008.</p>
+              <ul class="social_icon">
+                <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="Javascript:void(0)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                 </li>
-                <li class="d_none">
-                  <a href="Javascript:void(0)"
-                    ><i
-                      class="fa fa-search"
-                      style="cursor: pointer"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </li>
+                <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </header>
-    <!-- end banner -->
-    <!-- about -->
-    <div class="about">
-      <div class="container">
-        <div class="row d_flex">
-          <div class="col-md-6">
-            <div class="titlepage text_align_left">
-              <h2>About Our Honey</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have sufferedThere are many variations of
-                passages of Lorem Ipsum available, but the majority have
-                sufferedThere are many variations of passages of Lorem Ipsum
-                available, but the majority have suffered
-              </p>
-              <a class="read_more" href="about.html">Read More</a>
+          <div class="col-md-3 col-sm-6">
+            <div class="infoma">
+              <h3>Adderess</h3>
+              <ul class="conta">
+                <li>Wisma Bumiputera (lt. 14)
+                  Jl. Jend. Sudirman Kav. 75 Sudirman
+                  Jakarta Selatan 12920
+                </li>
+                <li>(+62)811 899 472</li>
+                <li> <a href="Javascript:void(0)">info@humanlifeindonesia.com</a></li>
+              </ul>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="about_img text_align_center">
-              <figure>
-                <img class="img_responsive" src="images/about.png" alt="#" />
-              </figure>
+          <div class="col-md-3 pad_lrft col-sm-6">
+            <div class="infoma">
+              <h3>Links</h3>
+              <ul class="fullink">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">What We Do</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="infoma">
+              <h3>Newsletter</h3>
+              <form class="form_subscri">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input class="newsl" placeholder="Your Name" type="text" name="Your Name">
+                  </div>
+                  <div class="col-md-12">
+                    <input class="newsl" placeholder="Email" type="text" name="Email">
+                  </div>
+                  <div class="col-md-12">
+                    <button class="subsci_btn">subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p>© <span id="currentYear"></span> All Rights Reserved. <a href="#">PT Human Life Indonesia</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- end about -->
-    <!--  footer -->
-    <footer>
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="infoma text_align_left">
-                <h3>About</h3>
-                <p class="ipsum">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sedconsectetur
-                </p>
-                <ul class="social_icon">
-                  <li>
-                    <a href="Javascript:void(0)"
-                      ><i class="fa fa-facebook" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="Javascript:void(0)"
-                      ><i class="fa fa-twitter" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="Javascript:void(0)"
-                      ><i class="fa fa-linkedin-square" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="Javascript:void(0)"
-                      ><i class="fa fa-instagram" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="infoma">
-                <h3>Adderess</h3>
-                <ul class="conta">
-                  <li>
-                    Healing Center, oo W Street name, <br />
-                    Loram ipusum
-                  </li>
-                  <li>(+71) 8522369417 <br />(+71) 8522369417</li>
-                  <li><a href="Javascript:void(0)"> demo@gmail.com</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 pad_lrft col-sm-6">
-              <div class="infoma">
-                <h3>Links</h3>
-                <ul class="fullink">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="shop.html">Shop</a></li>
-                  <li><a href="quality.html">Quality</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="infoma">
-                <h3>Newsletter</h3>
-                <form class="form_subscri">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <input
-                        class="newsl"
-                        placeholder="Your Name"
-                        type="text"
-                        name="Your Name"
-                      />
-                    </div>
-                    <div class="col-md-12">
-                      <input
-                        class="newsl"
-                        placeholder="Email"
-                        type="text"
-                        name="Email"
-                      />
-                    </div>
-                    <div class="col-md-12">
-                      <button class="subsci_btn">subscribe</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="copyright">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <p>
-                  © 2020 All Rights Reserved.
-                  <a href="https://html.design/"> Free html Templates</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- end footer -->
-    <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <!-- sidebar -->
-    <script src="js/custom.js"></script>
-  </body>
+  </footer>
+  <!--=============== END FOOTER ===============-->
+
+  <!--=============== JAVA SCRIPT ===============-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <!-- sidebar -->
+  <script src="js/custom.js"></script>
+
+  <!-- copy right tahun saat ini -->
+  <script>
+    // Mendapatkan tahun saat ini
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+  <!-- end -->
+
+  <!-- posisi header fix ketika di scroll turun -->
+  <script>
+    window.onscroll = function () {
+      var header = document.querySelector("header");
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    };
+  </script>
+  <!-- end -->
+  <!--=============== END JAVA SCRIPT ===============-->
+</body>
+
 </html>

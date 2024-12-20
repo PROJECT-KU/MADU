@@ -622,11 +622,7 @@
    <!--=============== END WHAT WE DO? ===============-->
 
    <!--=============== CONTACT ===============-->
-   <div class="contact" style="background-color: #dcd4d4; color: #000000;">
-      <video autoplay muted loop playsinline class="background-video">
-         <source src="images/Background_2.m4v" type="video/mp4">
-         Your browser does not support the video tag.
-      </video>
+   <div class="contact" style="background-color: #A9A9A9; color: #000000;">
       <div class="container">
          <div class="row ">
             <div class="col-md-12">
@@ -668,7 +664,8 @@
                <div class="col-md-3 col-sm-6">
                   <div class="infoma text_align_left">
                      <h3>About</h3>
-                     <p class="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedconsectetur </p>
+                     <p class="ipsum">PT Human Life Indonesia adalah perusahaan percabangan asal Korea yang didirikan
+                        pada tahun 2008.</p>
                      <ul class="social_icon">
                         <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -682,11 +679,12 @@
                   <div class="infoma">
                      <h3>Adderess</h3>
                      <ul class="conta">
-                        <li>Healing Center, oo W Street name, <br>
-                           Loram ipusum
+                        <li>Wisma Bumiputera (lt. 14)
+                           Jl. Jend. Sudirman Kav. 75 Sudirman
+                           Jakarta Selatan 12920
                         </li>
-                        <li>(+71) 8522369417 <br>(+71) 8522369417</li>
-                        <li> <a href="Javascript:void(0)"> demo@gmail.com</a></li>
+                        <li>(+62)811 899 472</li>
+                        <li> <a href="Javascript:void(0)">info@humanlifeindonesia.com</a></li>
                      </ul>
                   </div>
                </div>
@@ -696,8 +694,7 @@
                      <ul class="fullink">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="quality.html">Quality</a></li>
+                        <li><a href="shop.html">What We Do</a></li>
                         <li><a href="contact.html">Contact</a></li>
                      </ul>
                   </div>
@@ -726,7 +723,8 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <p>© 2020 All Rights Reserved. <a href="https://html.design/"> Free html Templates</a></p>
+                     <p>© <span id="currentYear"></span> All Rights Reserved. <a href="#">PT Human Life Indonesia</a>
+                     </p>
                   </div>
                </div>
             </div>
@@ -734,7 +732,8 @@
       </div>
    </footer>
    <!--=============== END FOOTER ===============-->
-   <!-- Javascript files-->
+
+   <!--=============== JAVA SCRIPT ===============-->
    <script src="js/jquery.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
@@ -802,6 +801,14 @@
       });
    </script>
    <!-- end -->
+
+   <!-- copy right tahun saat ini -->
+   <script>
+      // Mendapatkan tahun saat ini
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+   </script>
+   <!-- end -->
+   <!--=============== END JAVA SCRIPT ===============-->
 </body>
 
 </html>
