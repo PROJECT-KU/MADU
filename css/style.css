@@ -509,12 +509,19 @@ ul.conta_top li a {
 }
 
 .relative h3 {
-     padding-bottom: 43px;
-     font-size: 80px;
+     padding-bottom: 35px;
+     font-size: 70px;
      font-weight: 600;
      text-transform: uppercase;
      line-height: 80px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+     .relative h3 {
+        font-size: 30px !important; /* Adjust font size for tablets */
+        margin-top: 100px; /* Add margin for tablets */
+     }
+  }
 
 .carousel .icon-container {
      display: inline-block;
@@ -567,6 +574,37 @@ ul.conta_top li a {
 
 /** end banner section **/
 
+.client-jarak {
+     background: #fff;
+     padding: 50px 0;
+     margin-top: -100px;
+     position: relative;
+     margin-bottom: 50px;
+}
+
+.client-jarak::before {
+     content: "";
+     /* background: url(../images/about_left.png); */
+     background-repeat: no-repeat;
+     width: 360px;
+     height: 212px;
+     top: 0;
+}
+.client-jarak .titlepage {
+     padding-bottom: 0;
+}
+
+.client-jarak .titlepage h2 {
+     color: #1e1e1e;
+}
+
+.client-jarak .titlepage p {
+     font-weight: 400;
+     font-size: 17px;
+     line-height: 30px;
+     color: #303030;
+     padding-bottom: 59px;
+}
 
 /** about section **/
 
@@ -660,6 +698,7 @@ ul.conta_top li a {
 .contact {
      padding-bottom: 90px;
      padding-top: 88px;
+     background: url(../images/background_contact_us.png);
 }
 
 .main_form {
