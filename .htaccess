@@ -1,4 +1,10 @@
 RewriteEngine On
+RewriteBase /
+
+# Redirect index.html to root
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Automatically remove .html from all URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [L]
+RewriteRule ^(.*)$ $1 [L,QSA]
