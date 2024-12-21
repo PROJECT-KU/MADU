@@ -583,6 +583,7 @@ ul.conta_top li a {
 }
 
 .client-jarak::before {
+     position: relative;
      content: "";
      /* background: url(../images/about_left.png); */
      background-repeat: no-repeat;
