@@ -204,13 +204,36 @@
       /* end old */
 
       /* new */
-      /* Style untuk gambar */
+      /* Membuat gambar lebih responsif di dalam card */
+      .img-container img {
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+         /* Menjaga agar gambar tetap proporsional dan mengisi area card */
+      }
+
+      /* Menambahkan efek hover pada card */
+      .card {
+         transition: box-shadow 0.3s ease;
+         position: relative;
+         overflow: hidden;
+         /* Menyembunyikan elemen yang meluap */
+         height: 100%;
+         /* Menjaga agar card tetap memiliki tinggi yang konsisten */
+      }
+
+      .card:hover {
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+         transform: translateY(-5px);
+      }
+
+      /* Hover text efek */
       .img-container {
          position: relative;
          display: inline-block;
       }
 
-      /* Teks yang muncul saat hover */
+      /* Menambahkan batasan untuk hover text */
       .hover-text {
          position: absolute;
          top: 50%;
@@ -221,34 +244,44 @@
          padding: 10px;
          font-size: 14px;
          display: none;
-         /* Teks disembunyikan pada awalnya */
-         border-radius: 5px;
          width: 100%;
          height: 100%;
-         /* Lebar teks sesuai dengan gambar */
          text-align: center;
          box-sizing: border-box;
-         /* Pastikan padding tidak menambah lebar */
+         overflow: hidden;
+         /* Menyembunyikan teks yang meluap */
+         white-space: normal;
+         /* Membolehkan teks untuk membreak (multi-line) */
+         text-overflow: ellipsis;
+         /* Menambahkan ellipsis jika teks terpotong */
       }
 
-      /* Tampilkan teks saat gambar di-hover */
+      /* Mengatur supaya teks tidak meluap dan bisa multi-line */
       .img-container:hover .hover-text {
          display: block;
+         white-space: normal;
+         /* Mengizinkan teks menjadi beberapa baris */
+         overflow: hidden;
+         /* Menyembunyikan teks yang meluap */
+         text-overflow: ellipsis;
+         /* Menambahkan ellipsis pada teks yang terpotong */
+         max-height: 100%;
+         /* Membatasi tinggi teks, agar tidak meluap */
+         padding: 15px;
+         /* Menambah sedikit padding agar teks tidak terlalu menempel ke batas */
+         box-sizing: border-box;
+         /* Menghitung padding dalam ukuran total */
       }
 
-      /* Shadow pada card saat hover */
-      .card {
-         transition: box-shadow 0.3s ease;
-         /* Animasi smooth saat hover */
+      /* Menjaga tinggi card tetap konsisten */
+      .card-body {
+         padding: 15px;
+         text-align: center;
       }
 
-      .card:hover {
-         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-         /* Shadow pada hover */
-         transform: translateY(-5px);
-         /* Efek mengangkat sedikit kartu */
-         transition: all 0.3s ease;
-         /* Animasi smooth */
+      .card .hover-text {
+         max-height: 80%;
+         /* Membatasi tinggi agar tidak melebihi batas card */
       }
 
       /* end new */
@@ -491,9 +524,9 @@
                                              <h3>
                                                 Lampaui Kompetitor Anda
                                              </h3>
-                                             <p>Lampaui kompetitor bisnis dan produk Anda dengan melakukan export import
-                                                ke Negara Indonesia – Korea, sehingga lebih banyak pasar yang Anda
-                                                dapatkan.</p>
+                                             <p>Lampaui kompetitor bisnis dan produk Anda dengan melakukan ekspor-impor
+                                                ke Negara Indonesia dan Korea. Dengan jaringan global kami,
+                                                membantu Anda membuka pintu bagi pasar internasional.</p>
                                           </div>
                                        </div>
                                        <div class="col-md-6">
@@ -699,7 +732,8 @@
          </div>
          <div class="container">
             <div class="row">
-               <div class="col-md-3" style="height: max-content;">
+               <!-- Kartu pertama -->
+               <div class="col-6 col-md-3" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/gambar_untuk_eksport.png"
@@ -715,15 +749,15 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-3" style="height: max-content;">
+               <!-- Kartu kedua -->
+               <div class="col-6 col-md-3" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/gambar_untuk_pemasaran.png"
                            alt="Pemasaran" />
                         <div class="hover-text">
                            Kami akan memasarkan produk Anda secara offline dan online, sehingga akan mendapatkan hasil
-                           yang
-                           maksimal di Negara Indonesia – Korea.
+                           yang maksimal di Negara Indonesia – Korea.
                         </div>
                      </figure>
                      <div class="card-body">
@@ -732,14 +766,14 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-3" style="height: max-content;">
+               <!-- Kartu ketiga -->
+               <div class="col-6 col-md-3" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/gambar_untuk_solutions.png" alt="Solution" />
                         <div class="hover-text">
                            Bersama kami Anda tidak perlu bingung lagi untuk export import, karena Kami All in One
-                           Services
-                           Company.
+                           Services Company.
                         </div>
                      </figure>
                      <div class="card-body">
@@ -748,7 +782,8 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-3" style="height: max-content;">
+               <!-- Kartu keempat -->
+               <div class="col-6 col-md-3" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/B2B_B2C.png" alt="B2B & B2C" />
@@ -767,6 +802,7 @@
          </div>
       </div>
    </div>
+
    <!--=============== END WHAT WE DO? ===============-->
 
    <!--=============== CONTACT ===============-->
