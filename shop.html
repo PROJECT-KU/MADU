@@ -42,6 +42,98 @@
          background-color: #f8f9fa;
          /* Warna latar belakang saat di-scroll */
       }
+
+      .video-background {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         overflow: hidden;
+      }
+
+      .video-background video {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         min-width: 100%;
+         min-height: 100%;
+         transform: translate(-50%, -50%);
+         object-fit: cover;
+      }
+
+      .header {
+         position: relative;
+         z-index: 1;
+         background: rgba(255, 255, 255, 0.8);
+         /* White with transparency */
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar .nav-link {
+         color: black;
+         font-weight: bold;
+         text-transform: uppercase;
+      }
+
+      .navbar .nav-link:hover {
+         color: #007bff;
+      }
+
+      .logo img {
+         z-index: 2;
+      }
+
+      .about {
+         position: relative;
+         padding: 50px 0;
+      }
+
+      .video-title-section {
+         position: relative;
+         width: 100%;
+         height: 150px;
+         /* Tinggi latar belakang video untuk judul */
+         overflow: hidden;
+      }
+
+      .video-title-section video {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         min-width: 100%;
+         min-height: 100%;
+         transform: translate(-50%, -50%);
+         object-fit: cover;
+      }
+
+      .title-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: rgba(0, 0, 0, 0.6);
+         /* Semi-transparan untuk teks judul */
+      }
+
+      .title-overlay h2 {
+         color: #fff;
+         font-size: 36px;
+         font-weight: bold;
+         margin: 0;
+      }
+
+      .titlepage p {
+         margin-top: 30px;
+         font-size: 16px;
+         line-height: 1.8;
+         color: #333;
+      }
    </style>
    <!-- end -->
 
@@ -150,7 +242,7 @@
                   <div class="full">
                      <div class="center-desk">
                         <div class="logo">
-                           <a href="index.html"><img src="images/logo_hitam.png" alt="#"
+                           <a href="index.html"><img src="images/logo_putih.png" alt="#"
                                  style="width: 150px; height: 60px" /></a>
                         </div>
                      </div>
@@ -165,7 +257,7 @@
                      <div class="collapse navbar-collapse" id="navbarsExample04">
                         <ul class="navbar-nav mr-auto">
                            <li class="nav-item">
-                              <a class="nav-link" href="index.html">Home</a>
+                              <a class="nav-link" href="/">Home</a>
                            </li>
                            <li class="nav-item">
                               <a class="nav-link" href="about.html">About</a>
@@ -183,27 +275,28 @@
                      </div>
                   </nav>
                </div>
-               <div class="col-md-2">
-                  <ul class="email text_align_right">
-                     <li class="d_none">
-                        <a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a>
-                     </li>
-                     <li class="d_none">
-                        <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer"
-                              aria-hidden="true"></i></a>
-                     </li>
-                  </ul>
-               </div>
             </div>
+         </div>
+         <div class="video-background">
+            <video autoplay muted loop>
+               <source src="images/Background_2.m4v" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
          </div>
       </div>
    </header>
    <!--=============== END HEADER ===============-->
 
    <!--=============== WHAT WE DO? ===============-->
-   <div class="about">
-      <div class="titlepage text_align_center">
-         <h2 style="color: black;">WHAT WE DO?</h2>
+   <div class="about" style="margin-top: -65px;">
+      <div class="video-title-section">
+         <video autoplay muted loop>
+            <source src="images/Background_2.m4v" type="video/mp4" />
+            Your browser does not support the video tag.
+         </video>
+         <div class="title-overlay">
+            <h2>WHAT WE DO?</h2>
+         </div>
       </div>
       <div class="container">
          <div id="aboutCarousel" class="carousel slide" data-ride="carousel">
