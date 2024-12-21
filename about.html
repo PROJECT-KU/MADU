@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="icon" href="images/fevicon.png" type="image/gif" />
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
@@ -43,6 +44,98 @@
       background-color: #f8f9fa;
       /* Warna latar belakang saat di-scroll */
     }
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .header {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.8);
+      /* White with transparency */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .nav-link {
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .navbar .nav-link:hover {
+      color: #007bff;
+    }
+
+    .logo img {
+      z-index: 2;
+    }
+
+    .about {
+      position: relative;
+      padding: 50px 0;
+    }
+
+    .video-title-section {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      /* Tinggi latar belakang video untuk judul */
+      overflow: hidden;
+    }
+
+    .video-title-section video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .title-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      /* Semi-transparan untuk teks judul */
+    }
+
+    .title-overlay h2 {
+      color: #fff;
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .titlepage p {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+    }
   </style>
   <!-- end -->
 </head>
@@ -66,8 +159,7 @@
             <div class="full">
               <div class="center-desk">
                 <div class="logo">
-                  <a href="index.html"><img src="images/logo_hitam.png" alt="#"
-                      style="width: 150px; height: 60px" /></a>
+                  <a href="/"><img src="images/logo_putih.png" alt="#" style="width: 150px; height: 60px" /></a>
                 </div>
               </div>
             </div>
@@ -89,9 +181,6 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/shop">What We Do</a>
                   </li>
-                  <!-- <li class="nav-item">
-                    <a class="nav-link" href="quality">quality</a>
-                  </li> -->
                   <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact Us</a>
                   </li>
@@ -99,33 +188,39 @@
               </div>
             </nav>
           </div>
-          <div class="col-md-2">
-            <ul class="email text_align_right">
-              <li class="d_none">
-                <a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a>
-              </li>
-              <li class="d_none">
-                <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
         </div>
+      </div>
+      <!-- Video Background -->
+      <div class="video-background">
+        <video autoplay muted loop>
+          <source src="images/Background_1.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </header>
   <!--=============== END HEADER ===============-->
 
   <!--=============== ABOUT ===============-->
-  <div class="about">
+  <div class="about" style="margin-top: -20px;">
+    <div class="video-title-section">
+      <video autoplay muted loop>
+        <source src="images/Background_1.m4v" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="title-overlay">
+        <h2>About</h2>
+      </div>
+    </div>
     <div class="container">
       <div class="row d_flex">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="titlepage text_align_left">
-            <h2>About</h2>
             <p>
               PT Human Life Indonesia adalah perusahaan percabangan asal Korea yang didirikan pada tahun 2008. Kami
               merupakan jembatan eksport import antara Indonesia dan Korea, tetapi tidak hanya Indonesia dan Korea saja,
               Kami juga sebagai jembatan untuk Anda jika ingin melakukan eksport import ke Negara Asia lainnya.
+              <br /><br />
               Selain itu, PT Human Life Indonesia juga bergerak dalam bisnis pemasaran, dan juga All in One Service
               untuk target market B2B maupun B2C. Bersama Kami, Anda tidak perlu kebingungan lagi dalam memasarkan
               produk Anda ke luar Negeri, karena dengan jaringan Kami yang luas, serta metode pemasaran kami yang sudah
@@ -133,16 +228,10 @@
             </p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="about_img text_align_center">
-            <figure>
-              <img class="img_responsive" src="images/about.png" alt="#" />
-            </figure>
-          </div>
-        </div>
       </div>
     </div>
   </div>
+
   <!--===============  END ABOUT ===============-->
 
   <!--=============== FOOTER ===============-->
