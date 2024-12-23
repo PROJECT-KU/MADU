@@ -700,8 +700,11 @@ ul.conta_top li a {
      padding-bottom: 90px;
      padding-top: 88px;
      margin-top: -100px;
-     background: url(../images/background_contact_us.png);
-}
+     background: url(../images/background_contact_us_new.png) no-repeat center center;
+     background-size: cover; /* Menjamin gambar latar belakang mengisi seluruh elemen */
+     width: 100%; /* Menjamin elemen .contact mengisi seluruh lebar kontainer */
+   }
+   
 
 .main_form {
      width: 100%;

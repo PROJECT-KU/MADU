@@ -360,6 +360,82 @@
       }
    </style>
    <!-- end -->
+
+   <!-- animasi what we do -->
+   <style>
+      /* Mengatur gaya untuk card atau elemen yang akan dianimasikan */
+      .fade-up {
+         opacity: 0;
+         transform: translateY(-1000px);
+         /* Mulai dari posisi atas */
+         transition: opacity 3s, transform 3s;
+         /* Durasi animasi */
+      }
+
+      /* Ketika elemen terlihat di layar, tambahkan kelas visible */
+      .fade-up.visible {
+         opacity: 1;
+         transform: translateY(0);
+         /* Bergerak ke posisi normal */
+      }
+
+      /* Animasi fade-in */
+      .fade-in {
+         opacity: 0;
+         transform: translateY(500px);
+         /* Mulai dari posisi bawah */
+         transition: opacity 3s, transform 3s;
+         /* Durasi animasi */
+      }
+
+      /* Ketika elemen terlihat, tampilkan dengan opacity penuh */
+      .fade-in.visible {
+         opacity: 1;
+         transform: translateY(0);
+         /* Bergerak ke posisi normal */
+      }
+
+      /* Membuat elemen lainnya agar terlihat dan diuji */
+      .content {
+         height: 1000px;
+         /* Untuk memastikan ada ruang untuk scroll */
+      }
+   </style>
+   <!-- end -->
+
+   <!-- animasi client -->
+   <style>
+      /* Efek fade-in dari kiri */
+      .fade-left {
+         opacity: 0;
+         transform: translateX(-100%);
+         animation: fadeInLeft 5s forwards;
+      }
+
+      /* Efek fade-in dari kanan */
+      .fade-right {
+         opacity: 0;
+         transform: translateX(100%);
+         animation: fadeInRight 5s forwards;
+      }
+
+      /* Animasi fade-in dari kiri */
+      @keyframes fadeInLeft {
+         to {
+            opacity: 1;
+            transform: translateX(0);
+         }
+      }
+
+      /* Animasi fade-in dari kanan */
+      @keyframes fadeInRight {
+         to {
+            opacity: 1;
+            transform: translateX(0);
+         }
+      }
+   </style>
+   <!-- end -->
 </head>
 <!--=============== END CSS ===============-->
 
@@ -489,10 +565,10 @@
                            <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search"
                                     style="cursor: pointer;" aria-hidden="true"></i></a> </li>
                         </ul> -->
-                        <li class="hide-on-mobile"><i class="fa fa-phone" aria-hidden="true"></i> Call 0813 3838 7866
+                        <li class="hide-on-mobile"><i class="fa fa-phone" aria-hidden="true"></i> 0813 3838 7866
                         </li>
                         <li class="hide-on-mobile"><i class="fa fa-envelope" aria-hidden="true"></i><a
-                              href="Javascript:void(0)">info@humanlife.com</a></li>
+                              href="Javascript:void(0)">info@humanlifeindonesia.com</a></li>
                         <li> <i class="fa fa-language" aria-hidden="true"></i><a href="Javascript:void(0)">IND | ENG</a>
                         </li>
                      </ul>
@@ -520,7 +596,7 @@
                                  <div class="carousel-caption relative">
                                     <div class="row d_flex">
                                        <div class="col-md-6">
-                                          <div class="board">
+                                          <div class="board fade-left">
                                              <h3>
                                                 Lampaui Kompetitor Anda
                                              </h3>
@@ -529,7 +605,7 @@
                                                 membantu Anda membuka pintu bagi pasar internasional.</p>
                                           </div>
                                        </div>
-                                       <div class="col-md-6">
+                                       <div class="col-md-6 fade-right">
                                           <div class="banner_img">
                                              <figure><img class="img_responsive adaptive-image"
                                                    src="images/Slide_1_update.png">
@@ -544,7 +620,7 @@
                                  <div class="carousel-caption relative">
                                     <div class="row d_flex">
                                        <div class="col-md-6">
-                                          <div class="board">
+                                          <div class="board fade-left">
                                              <h3>
                                                 Saling Silang Menguntungkan
                                              </h3>
@@ -553,7 +629,7 @@
                                                 kesempatan itu untuk bisnis Anda.</p>
                                           </div>
                                        </div>
-                                       <div class="col-md-6">
+                                       <div class="col-md-6 fade-right">
                                           <div class="banner_img">
                                              <figure>
                                                 <img class="img_responsive adaptive-image"
@@ -569,7 +645,7 @@
                                  <div class="carousel-caption relative">
                                     <div class="row d_flex">
                                        <div class="col-md-6">
-                                          <div class="board">
+                                          <div class="board fade-left">
                                              <h3>
                                                 Target Pasar di Negara Besar
                                              </h3>
@@ -578,7 +654,7 @@
                                                 peningkatan omzet yang memukau.</p>
                                           </div>
                                        </div>
-                                       <div class="col-md-6">
+                                       <div class="col-md-6 fade-right">
                                           <div class="banner_img">
                                              <figure><img class="img_responsive adaptive-image"
                                                    src="images/Slide_3_update.png">
@@ -620,7 +696,7 @@
             </div>
             <h2 class="mb-4" style="color: #000000;">OUR CLIENTS</h2>
          </div>
-         <div class="owl-carousel client-slider" style="margin-top: -50px;">
+         <div class="owl-carousel client-slider fade-in" style="margin-top: -50px;">
             <div class="card">
                <img src="images/CLIENT/blp.jpg" alt="Client 1" style="width: 100%;">
             </div>
@@ -733,7 +809,7 @@
          <div class="container">
             <div class="row">
                <!-- Kartu pertama -->
-               <div class="col-6 col-md-3" style="height: max-content;">
+               <div class="col-6 col-md-3 fade-up" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/gambar_untuk_eksport.png"
@@ -750,7 +826,7 @@
                   </div>
                </div>
                <!-- Kartu kedua -->
-               <div class="col-6 col-md-3" style="height: max-content;">
+               <div class="col-6 col-md-3 fade-in" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/gambar_untuk_pemasaran.png"
@@ -767,7 +843,7 @@
                   </div>
                </div>
                <!-- Kartu ketiga -->
-               <div class="col-6 col-md-3" style="height: max-content;">
+               <div class="col-6 col-md-3 fade-up" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/gambar_untuk_solutions.png" alt="Solution" />
@@ -783,7 +859,7 @@
                   </div>
                </div>
                <!-- Kartu keempat -->
-               <div class="col-6 col-md-3" style="height: max-content;">
+               <div class="col-6 col-md-3 fade-in" style="height: max-content;">
                   <div class="card mb-3">
                      <figure class="img-container">
                         <img class="img_responsive" src="images/WHAT_WE_DO/B2B_B2C.png" alt="B2B & B2C" />
@@ -809,12 +885,12 @@
    <div class="contact">
       <div class="container">
          <div class="row ">
-            <div class="col-md-12">
+            <div class="col-md-12 fade-right">
                <div class="titlepage text_align_center">
                   <h2>Contact Us</h2>
                </div>
             </div>
-            <div class="col-md-10 offset-md-1 ">
+            <div class="col-md-10 offset-md-1 fade-in">
                <form id="request" class="main_form">
                   <div class="row">
                      <div class="col-md-6 ">
@@ -847,9 +923,11 @@
             <div class="row">
                <div class="col-md-3 col-sm-6">
                   <div class="infoma text_align_left">
-                     <h3>About</h3>
-                     <p class="ipsum">PT Human Life Indonesia adalah perusahaan percabangan asal Korea yang didirikan
-                        pada tahun 2008.</p>
+                     <div class="logo">
+                        <a href="/"><img src="images/logo_putih.png" alt="#" style="width: 150px; height: 60px" /></a>
+                     </div>
+                     <p class="ipsum">Kami adalah jembatan bagi bisnis Anda jika ingin melakukan export import ke Negara
+                        Asia.</p>
                      <ul class="social_icon">
                         <li><a href="Javascript:void(0)"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
                         </li>
@@ -866,12 +944,12 @@
                   <div class="infoma">
                      <h3>Adderess</h3>
                      <ul class="conta">
+                        <li>(+62) 811 899 472</li>
+                        <li> <a href="Javascript:void(0)">info@humanlifeindonesia.com</a></li>
                         <li>Wisma Bumiputera (lt. 14)
                            Jl. Jend. Sudirman Kav. 75 Sudirman
                            Jakarta Selatan 12920
                         </li>
-                        <li>(+62)811 899 472</li>
-                        <li> <a href="Javascript:void(0)">info@humanlifeindonesia.com</a></li>
                      </ul>
                   </div>
                </div>
@@ -888,7 +966,7 @@
                </div>
                <div class="col-md-3 col-sm-6">
                   <div class="infoma">
-                     <h3>Newsletter</h3>
+                     <h3>Join Us</h3>
                      <form class="form_subscri">
                         <div class="row">
                            <div class="col-md-12">
@@ -1005,6 +1083,36 @@
    <script>
       // Mendapatkan tahun saat ini
       document.getElementById("currentYear").textContent = new Date().getFullYear();
+   </script>
+   <!-- end -->
+
+   <!-- animasi what we do -->
+   <script>
+      // Fungsi untuk memeriksa apakah elemen terlihat di layar
+      function isInView(element) {
+         const rect = element.getBoundingClientRect();
+         return rect.top >= 0 && rect.bottom <= window.innerHeight;
+      }
+
+      // Fungsi untuk memeriksa apakah elemen sudah mencapai posisi translateY(0)
+      function hasReachedPosition(element) {
+         const rect = element.getBoundingClientRect();
+         return rect.top === 0; // Memeriksa jika elemen sudah berada di posisi translateY(0)
+      }
+
+      // Event listener untuk scroll
+      window.addEventListener('scroll', function () {
+         // Pilih semua elemen yang memiliki kelas .fade-up dan .fade-in
+         const elements = document.querySelectorAll('.fade-up, .fade-in');
+         elements.forEach(function (element) {
+            if (isInView(element) && !hasReachedPosition(element)) {
+               element.classList.add('visible'); // Menambahkan kelas 'visible' saat elemen terlihat
+            }
+         });
+      });
+
+      // Cek saat halaman pertama kali dimuat
+      window.dispatchEvent(new Event('scroll'));
    </script>
    <!-- end -->
    <!--=============== END JAVA SCRIPT ===============-->
